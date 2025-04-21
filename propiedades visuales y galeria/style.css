@@ -1,0 +1,103 @@
+* {
+    margin: 0;                          /* Elimina el margen por defecto de todos los elementos */
+    padding: 0;                         /* Elimina el relleno por defecto de todos los elementos */
+    box-sizing: border-box;            /* Hace que el padding y el borde no aumenten el tamaño total del elemento */
+}
+
+.carta {
+    width: 100%;
+    font-family: "Bungee Spice", sans-serif;
+    text-shadow: greenyellow;                    
+    max-width: 350px;
+    border-radius: 6px;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 1s ease, transform 0.5s ease, box-shadow 0.3s ease;  /* Transiciones más suaves */
+    cursor: pointer;
+    background-color: rgb(111, 209, 216);
+    background-image: radial-gradient(yellow, rgb(87, 221, 75), rgb(0, 0, 0));
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px rgb(24, 10, 10);
+    border: solid 5px #f50d0d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra sutil */
+}
+
+.carta:hover {
+    border: solid 5px #000000;         /* Mantiene el borde negro */
+    transform: scale(1.05) rotate(5deg); /* Aumenta ligeramente el tamaño y rota la carta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);  /* Aumenta la sombra en hover */
+    filter: blur(0px);  /* Aplica un desenfoque suave a la carta */
+}
+
+h1 {
+    margin: 30px 0;
+    font-family: "Bungee Spice", sans-serif;
+    font-size: 3rem;                    /* Tamaño grande para el título */
+    text-transform: uppercase;          /* Convertir todo el texto a mayúsculas */
+    letter-spacing: 5px;                /* Espaciado entre las letras */
+    text-align: center;                 /* Centrado del título */
+    color: rgb(3, 3, 3);          /* Color del texto */
+    text-shadow: 5px 5px 5px red, 0 0 25px rgba(255, 0, 0, 0.5); /* Sombra de texto llamativa */
+    transition: transform 0.5s ease, text-shadow 0.5s ease; /* Transiciones suaves */
+    animation: gradientShift 5s infinite alternate; /* Fondo de gradiente animado (como en las cartas) */
+}
+
+h1:hover {
+    transform: scale(1.1) rotate(3deg); /* Escala y rota el título ligeramente en hover */
+    text-shadow: 10px 10px 15px red, 0 0 30px rgba(255, 0, 0, 0.8); /* Aumenta el efecto de sombra en hover */
+    color: rgb(189, 39, 39);           /* Cambio de color en hover */
+}
+
+/* Animación de gradiente para el fondo (similar a las cartas) */
+@keyframes gradientShift {
+    0% { background-image: radial-gradient(yellow, rgb(87, 221, 75), rgb(0, 0, 0)); }
+    50% { background-image: radial-gradient(pink, rgb(255, 105, 180), rgb(0, 0, 0)); }
+    100% { background-image: radial-gradient(yellow, rgb(87, 221, 75), rgb(0, 0, 0)); }
+}
+
+.carta img {
+    width: 100%;                       
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: transform 1s ease, filter 0.5s ease;  /* Transiciones suaves */
+}
+
+.carta:hover img {
+    transform: scale(1.2) rotate(15deg) translateY(-10px); /* Escala, rota y mueve la imagen */
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));  /* Aplica un filtro de sombra en la imagen */
+    transition: transform 0.5s ease, filter 0.3s ease;  /* Transición más suave */
+}
+
+body {
+    text-align: center;
+    background-color: rgba(219, 191, 191, 0); /* Color de fondo transparente */
+    background-image: url(imagenes/characters/image.png); /* Imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    margin: 30px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Animación de gradiente para fondo*/
+@keyframes gradientShift {
+    0% { background-image: radial-gradient(yellow, rgb(221, 75, 75), rgb(40, 27, 153)); }
+    50% { background-image: radial-gradient(pink, rgb(255, 3, 129), rgb(0, 0, 0)); }
+}
+
+.carta {
+    animation: gradientShift 6s infinite alternate;  /* Fondo con gradiente animado */
+}
+
+/* Mejoras de accesibilidad */
+.carta:focus {
+    outline: 3px solid rgba(0, 123, 255, 0.6);  /* Resaltar carta cuando esté enfocada */
+}
