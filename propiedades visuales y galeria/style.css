@@ -99,5 +99,5 @@ h1 {
 
 /* Mejoras de accesibilidad */
 .carta:focus {
-    outline: 3px solid rgba(0, 123, 255, 0.6);  /* Resaltar carta cuando esté enfocada */
+    outline: 3px solid rgba(0, 123, 255, 0.5);  /* Resaltar carta cuando esté enfocada */
 }
